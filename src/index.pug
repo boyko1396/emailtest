@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+html(lang='ru')
+  include includes/head.pug
+
+  body
+
+    #root
+      main(role="main").main
+        .main__inner
+          aside.aside.main__aside
+            .aside__inner.aside__inner--theme-gray
+              .aside__slide
+                img(src="images/icon/guard-type-1.svg" alt="Проверьте безопасность ваших данных").aside__icon
+                h2.aside__title Проверьте безопасность ваших данных
+                .content.aside__text
+                  p Из-за недавнего инцидента с Твиттером, есть риск, что ваши данные могут быть использованы в корыстных целях. Наш антивирус выпустил обновление, которое защищает вас от подобного<br><a href="#">Подробнее на первоисточнике</a>
+                form(action="#").aside__form
+                  input(type="email" name="email" required placeholder="Введите ваш Email").u-input.u-input--size-md.u-input--theme-gray.aside__form-input
+                  button(type="button").js-step-next.btn.btn--size-md.btn--theme-accent.aside__form-btn
+                    span.btn__inner
+                      span.btn__title Пройти проверку
+                footer.aside__footer Проверка займет не более 10 секунд
+              .aside__slide
+                img(src="images/icon/guard-type-1.svg" alt="Проверьте безопасность ваших данных").aside__icon
+                .content.aside__prev-link
+                  p <a href="#" class="js-step-prev">< &nbsp;Назад</a>
+                form(action="#").aside__form
+                  input(type="text" name="code" required placeholder="Введите код полученый с Email").u-input.u-input--size-md.u-input--theme-gray.aside__form-input
+                  button(type="button").js-step-next.btn.btn--size-md.btn--theme-accent.aside__form-btn
+                    span.btn__inner
+                      span.btn__title Начать проверку
+                footer.aside__footer Проверка займет не более 10 секунд
+              .aside__slide
+                .aside__header
+                  img(src="images/icon/guard-type-1.svg" alt="Проверьте безопасность ваших данных").aside__header-icon
+                  .aside__header-dots
+                    span
+                    span
+                    span
+                .u-progress.aside__progress
+                  span.btn.btn--size-md.btn--theme-accent.u-progress__line
+                    span.btn__inner
+                      span.btn__title Идет проверка
+                    span(style="width: 50%;").u-progress__line-current
+                footer.aside__footer Проверка займет не более 10 секунд
+          .layout.main__layout
+
+    include includes/foot.pug

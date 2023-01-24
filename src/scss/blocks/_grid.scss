@@ -1,0 +1,35 @@
+.row {
+    margin: 0 var(--gap-);
+    display: flex;
+    flex-wrap: wrap;
+    &__col {
+        max-width: 100%;
+        min-height: 1px;
+        padding: 0 var(--gap);
+        flex-grow: 1;
+        &--3 {
+            max-width: 25%;
+            flex-basis: 25%;
+        }
+        &--4 {
+            max-width: 33.33333333%;
+            flex-basis: 33.33333333%;
+        }
+        &--6 {
+            max-width: 50%;
+            flex-basis: 50%;
+        }
+        &--8 {
+            max-width: 66.6666666667%;
+            flex-basis: 66.6666666667%;
+        }
+        &--12 {
+            max-width: 100%;
+            flex-basis: 100%;
+        }
+    }
+}
+
+[class^='row__col'] {
+    @extend .row__col;
+}

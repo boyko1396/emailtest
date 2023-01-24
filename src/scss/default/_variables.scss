@@ -1,0 +1,40 @@
+// typography
+$ff-default: 'Inter', Arial, sans-serif;
+
+// pallets
+$color-black-1: #000;
+$color-white-1: #fff;
+$color-gray-1: #F6F6F6;
+$color-blue-1: #0047FC;
+$color-blue-2: #4F3CC9;
+$color-blue-3: #3C8EC9;
+$color-blue-4: #00579F;
+$color-yellow-1: #FFB11B;
+$color-yellow-2: #F7931A;
+$color-red-1: #C93CA2;
+$color-red-2: #C95E3C;
+$color-green-1: #369C33;
+$color-green-2: #53BA76;
+$color-brown-1: #7C4D00;
+$color-brown-2: #784F00;
+
+// gradients
+$gradient-blue-1: linear-gradient(287.56deg, $color-blue-2 0%, $color-blue-3 100%);
+$gradient-red-1: linear-gradient(287.56deg, rgba($color-red-1, .88) 0%, rgba($color-red-2, .88) 100%);
+$gradient-green-1: linear-gradient(287.56deg, rgba($color-green-1, .88) 0%, rgba($color-green-2, .88) 100%);;
+
+// breakpoints
+$xl: 1440px;
+$xl-mf: $xl + 1;
+
+$lg: 1199px;
+$lg-mf: $lg + 1;
+
+$md: 991px;
+$md-mf: $md + 1;
+
+$sm: 767px;
+$sm-mf: $sm + 1;
+
+$xs: 576px;
+$xs-mf: $xs;

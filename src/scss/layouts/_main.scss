@@ -1,0 +1,264 @@
+.u-progress {
+    &__line {
+        width: 100%;
+        pointer-events: none;
+        cursor: default;
+        overflow: hidden;
+        &-current {
+            background: $color-yellow-1;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: all .4s;
+            z-index: -1;
+        }
+    }
+}
+
+.aside {
+    &__inner {
+        padding: 40px;
+        border-radius: 24px;
+        &--theme {
+            &-gray {
+                background: rgba($color-gray-1, .88);
+                color: $color-black-1;
+            }
+            &-red {
+                background: $gradient-red-1;
+                color: $color-white-1;
+            }
+            &-green {
+                background: $gradient-green-1;
+                color: $color-white-1;
+            }
+        }
+        & > :last-child {
+            margin-bottom: 0;
+        }
+    }
+    &__icon {
+        width: 44px;
+        height: auto;
+        margin: 0 0 32px;
+        display: block;
+    }
+    &__slide {
+        display: none;
+    }
+    &__header {
+        margin: 0 0 32px;
+        display: flex;
+        align-items: center;
+        &-icon {
+            width: 44px;
+            height: auto;
+            margin: 0 32px 0 0;
+        }
+        &-dots {
+            display: flex;
+            align-items: center;
+            span {
+                background: $gradient-blue-1;
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                & + span{
+                    margin-left: 14px;
+                }
+            }
+        }
+        &-text {
+            margin-left: -10px;
+            &-title {
+                margin: 0 0 4px;
+            }
+            &-email {
+                margin: 0;
+                font-weight: bold;
+            }
+        }
+    }
+    &__title {
+        margin: 0 0 12px;
+    }
+    &__text {
+        margin: 0 0 32px;
+    }
+    &__prev-link {
+        margin: 0 0 16px;
+    }
+    &__form {
+        &-input {
+        }
+        &-btn {
+            width: 100%;
+            margin: 32px 0 12px;
+        }
+    }
+    &__footer {
+        margin: 0;
+        font-size: 12px;
+        color: rgba($color-black-1, .5);
+        text-align: center;
+    }
+    &__progress {
+        margin: 0 0 12px;
+    }
+}
+
+.layout {
+    overflow: hidden;
+    &__result {
+        &-content {
+            padding: 40px;
+            &-title {
+                margin: 0 0 40px;
+            }
+            &-list {
+                margin: 0 0 40px;
+                &-line {
+                    & + & {
+                        margin-top: 20px;
+                    }
+                }
+            }
+            &-media {
+                margin: 0 0 16px;
+                &-row {
+                    margin: -4px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    &-col {
+                        max-width: 12.5%;
+                        padding: 4px;
+                        flex: 0 0 12.5%;
+                    }
+                }
+            }
+            &-access-password {
+                background: rgba($color-yellow-1, .24);
+                padding: 12px;
+                display: block;
+                font-weight: 600;
+                font-size: 12px;
+                color: $color-brown-1;
+                text-align: center;
+                border-radius: 8px;
+            }
+        }
+        &-footer {
+            background: rgba($color-green-1, .2);
+            padding: 40px;
+            &-title {
+                margin: 0 0 12px;
+            }
+            &-text {
+                margin: 0 0 28px;
+            }
+            &-btn {
+            }
+        }
+    }
+    &__protect {
+        padding: 40px;
+        &-title {
+            margin: 0 0 32px;
+        }
+        &-body {
+            margin: 0 0 24px;
+            display: flex;
+            justify-content: space-between;
+            &-list {
+                flex-grow: 1;
+            }
+            &-aside {
+                margin-left: 32px;
+                flex: 0 0 138px;
+            }
+        }
+        &-payments {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            &-content {
+                padding-right: 32px;
+            }
+            &-title {
+                margin: 0 0 12px;
+            }
+            &-list {
+                margin: -4px;
+                display: flex;
+                &-card {
+                    margin: 4px;
+                }
+            }
+            &-btn {
+                padding-right: 10px;
+                padding-left: 10px;
+                flex-grow: 1;
+                flex-shrink: 0;
+                font-size: 14px;
+            }
+        }
+    }
+    &__transfer {
+        padding: 52px 40px;
+        display: flex;
+        align-items: flex-start;
+        &-aside {
+            margin-right: 32px;
+            flex: 0 0 138px;
+        }
+        &-content {
+            flex-grow: 1;
+        }
+        &-title {
+            margin: 0 0 8px;
+        }
+        &-text {
+            margin: 0 0 24px;
+            font-size: 12px;
+        }
+        &-group {
+            display: flex;
+            &-input {
+                margin-right: 20px;
+                flex-grow: 1;
+            }
+            &-btn {
+                padding-right: 20px;
+                padding-left: 20px;
+                flex-shrink: 0;
+                flex-grow: 1;
+            }
+        }
+    }
+}
+
+.main {
+    background: $gradient-blue-1;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    &__inner {
+        width: 100%;
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: var(--gap) var(--gap-fluid);
+        display: flex;
+        align-items: center;
+    }
+    &__aside {
+        max-width: 380px;
+        margin-right: var(--gap-fluid);
+        flex: 0 0 380px;
+    }
+    &__layout {
+        background: rgba($color-gray-1, .88);
+        flex-grow: 1;
+        border-radius: 24px;
+    }
+}
