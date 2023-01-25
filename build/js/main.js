@@ -1,3 +1,7 @@
+setInterval(function() {
+  $('body').addClass('is-animation');
+}, 550);
+
 $(document).ready(function() {
   triggerCopy();
 
