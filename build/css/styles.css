@@ -1467,20 +1467,20 @@ body:not(.is-animation) .main__aside {
   transform: translateX(-800px);
 }
 body:not(.is-animation) .bg-el__item--1:before {
-  -webkit-transform: translateY(-50vh);
-  transform: translateY(-50vh);
+  -webkit-transform: translateY(-100vh);
+  transform: translateY(-100vh);
 }
 body:not(.is-animation) .bg-el__item--2:before {
-  -webkit-transform: translateY(-50vh);
-  transform: translateY(-50vh);
+  -webkit-transform: translateY(-100vh);
+  transform: translateY(-100vh);
 }
 body:not(.is-animation) .bg-el__item--3:before {
-  -webkit-transform: translateY(-50vh);
-  transform: translateY(-50vh);
+  -webkit-transform: translateY(-100vh);
+  transform: translateY(-100vh);
 }
 body:not(.is-animation) .bg-el__item--4:before {
-  -webkit-transform: translateY(-50vh);
-  transform: translateY(-50vh);
+  -webkit-transform: translateY(-100vh);
+  transform: translateY(-100vh);
 }
 body:not(.is-animation) .bg-el__item-img--1 {
   -webkit-transform: translateY(100vh);
