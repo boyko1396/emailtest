@@ -1314,6 +1314,7 @@ svg,
   position: absolute;
   top: 0;
   right: 0;
+  transition: all 0.15s;
 }
 .bg-el__item:before {
   background: url(../images/bg-hook.svg) center 0 no-repeat;
@@ -1336,20 +1337,21 @@ svg,
   transition-delay: 0.5s;
 }
 .bg-el__item--2 {
-  margin-right: 638px;
-  top: -298px;
+  margin-right: 650px;
+  top: -280px;
 }
 .bg-el__item--2:before {
   transition-delay: 2s;
 }
 .bg-el__item--3 {
-  margin-right: 398px;
+  margin-right: 520px;
+  top: -130px;
 }
 .bg-el__item--3:before {
   transition-delay: 3s;
 }
 .bg-el__item--4 {
-  margin-right: 156px;
+  margin-right: 250px;
   top: -172px;
 }
 .bg-el__item--4:before {

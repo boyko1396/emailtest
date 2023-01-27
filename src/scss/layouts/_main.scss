@@ -306,6 +306,7 @@
         position: absolute;
         top: 0;
         right: 0;
+        transition: all .15s;
         &:before {
             background: url(../images/bg-hook.svg) center 0 no-repeat;
             background-size: contain;
@@ -332,20 +333,21 @@
             }
         }
         &--2 {
-            margin-right: 638px;
-            top: -298px;
+            margin-right: 650px;
+            top: -280px;
             &:before {
                 transition-delay: 2s;
             }
         }
         &--3 {
-            margin-right: 398px;
+            margin-right: 520px;
+            top: -130px;
             &:before {
                 transition-delay: 3s;
             }
         }
         &--4 {
-            margin-right: 156px;
+            margin-right: 250px;
             top: -172px;
             &:before {
                 transition-delay: 4s;
