@@ -1,42 +1,60 @@
-.u-progress {
-    &__line {
-        width: 100%;
-        pointer-events: none;
-        cursor: default;
-        overflow: hidden;
-        &-current {
-            background: $color-yellow-1;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-            transition: all .4s;
-            z-index: -1;
+.aside {
+    transition: all 1.2s;
+    transition-property: color;
+    &--theme {
+        &-gray {
+            color: $color-black-1;
+        }
+        &-red {
+            color: $color-white-1;
+        }
+        &-blue {
+            color: $color-white-1;
+        }
+        &-green {
+            color: $color-white-1;
         }
     }
-}
-
-.aside {
     &__inner {
         padding: 40px;
         border-radius: 24px;
-        &--theme {
-            &-gray {
-                background: rgba($color-gray-1, .88);
-                color: $color-black-1;
-            }
-            &-red {
-                background: $gradient-red-1;
-                color: $color-white-1;
-            }
-            &-green {
-                background: $gradient-green-1;
-                color: $color-white-1;
-            }
-        }
+        position: relative;
         & > :last-child {
             margin-bottom: 0;
         }
+    }
+    &__bg {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: inherit;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 1.2s;
+        z-index: -1;
+        &--gray {
+        }
+    }
+    &--theme-gray &__bg--gray,
+    &--theme-blue &__bg--blue,
+    &--theme-red &__bg--red,
+    &--theme-green &__bg--green {
+        opacity: 1;
+        visibility: visible;
+    }
+    &--theme-gray &__bg--gray {
+        background: rgba($color-gray-1, .88);
+    }
+    &--theme-blue &__bg--blue {
+        background: $gradient-blue-1;
+    }
+    &--theme-red &__bg--red {
+        background: $gradient-red-1;
+    }
+    &--theme-green &__bg--green {
+        background: $gradient-green-1;
     }
     &__icon {
         width: 44px;
@@ -285,12 +303,23 @@
         flex: 0 0 380px;
         transition: all .7s;
         transition-delay: .5s;
+        z-index: 1;
     }
     &__layout {
         background: rgba($color-gray-1, .88);
         flex-grow: 1;
         border-radius: 24px;
+        transition: all .8s;
+        &:not(.is-show) {
+            transform: translateX(-50vw);
+            opacity: 0;
+            visibility: hidden;
+        }
     }
+}
+
+body.is-animation .main__aside {
+    transition-delay: 0s;
 }
 
 .bg-el {

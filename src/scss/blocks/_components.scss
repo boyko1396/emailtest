@@ -599,3 +599,25 @@ svg,
         }
     }
 }
+
+.u-progress {
+    &__line {
+        width: 100%;
+        pointer-events: none;
+        cursor: default;
+        overflow: hidden;
+        &-current {
+            background: $color-yellow-1;
+            width: 0;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: linear 8s .6s;
+            z-index: -1;
+            &.is-active {
+                width: 100%;
+            }
+        }
+    }
+}

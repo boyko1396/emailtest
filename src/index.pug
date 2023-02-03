@@ -21,17 +21,21 @@ html(lang='ru')
           .line-bg.bg-lines__item
           .line-bg.bg-lines__item
         .bg-el
-          .bg-el__item.bg-el__item--1.js-parallax-init-1
+          .bg-el__item.bg-el__item--1
             .bg-el__item-img.bg-el__item-img--1
-          .bg-el__item.bg-el__item--2.js-parallax-init-2
+          .bg-el__item.bg-el__item--2
             .bg-el__item-img.bg-el__item-img--2
-          .bg-el__item.bg-el__item--3.js-parallax-init-3
+          .bg-el__item.bg-el__item--3
             .bg-el__item-img.bg-el__item-img--3
-          .bg-el__item.bg-el__item--4.js-parallax-init-4
+          .bg-el__item.bg-el__item--4
             .bg-el__item-img.bg-el__item-img--4
         .main__inner
-          aside.aside.main__aside
-            .aside__inner.aside__inner--theme-gray
+          aside.aside.aside--theme-gray.main__aside
+            .aside__inner
+              .aside__bg.aside__bg--gray
+              .aside__bg.aside__bg--blue
+              .aside__bg.aside__bg--red
+              .aside__bg.aside__bg--green
               .aside__slide
                 img(src="images/icon/guard-type-1.svg" alt="Проверьте безопасность ваших данных").aside__icon
                 h2.aside__title Проверьте безопасность ваших данных
@@ -49,7 +53,7 @@ html(lang='ru')
                   p <a href="#" class="js-step-prev">< &nbsp;Назад</a>
                 form(action="#").aside__form
                   input(type="text" name="code" required placeholder="Введите код полученый с Email").u-input.u-input--size-md.u-input--theme-gray.aside__form-input
-                  button(type="button").js-step-next.btn.btn--size-md.btn--theme-accent.aside__form-btn
+                  button(type="button").js-step-next.js-progress-hook.btn.btn--size-md.btn--theme-accent.aside__form-btn
                     span.btn__inner
                       span.btn__title Начать проверку
                 footer.aside__footer Проверка займет не более 10 секунд
@@ -64,8 +68,149 @@ html(lang='ru')
                   span.btn.btn--size-md.btn--theme-accent.u-progress__line
                     span.btn__inner
                       span.btn__title Идет проверка
-                    span(style="width: 50%;").u-progress__line-current
+                    span.js-progress.u-progress__line-current
                 footer.aside__footer Проверка займет не более 10 секунд
+              .aside__slide
+                .aside__header
+                  img(src="images/icon/guard-type-2.svg" alt="Ваши данные в опасности!").aside__header-icon
+                  .aside__header-text
+                    p.aside__header-text-title Ваша почта:
+                    p.aside__header-text-email Kostik@gmail.com
+                h2.aside__title Ваши данные в опасности!
+                .content.aside__text
+                  p <strong>Успейте защитить ваши данные.</strong><br>Подробности отправили вам на почту:<br>kostik@gmail.com
           .layout.main__layout
+            .layout__result
+              .layout__result-content
+                h2.layout__result-content-title Найденные данные
+                .layout__result-content-list
+                  .line-info.layout__result-content-list-line
+                    .line-info__title Ваша ФИО:
+                    .line-info__body
+                      .line-info__list
+                        .info-badge.info-badge--theme-fill.line-info__list-item
+                          span.info-badge__title Константинов
+                        .info-badge.info-badge--theme-fill.line-info__list-item
+                          span.info-badge__title Константин
+                        .info-badge.info-badge--theme-fill.line-info__list-item
+                          span.info-badge__title Константинопольский
+                  .line-info.layout__result-content-list-line
+                    .line-info__title Ваши контакты:
+                    .line-info__body
+                      .line-info__list
+                        .info-badge.info-badge--theme-fill.line-info__list-item
+                          span.info-badge__title +79990592985
+                        .info-badge.info-badge--theme-fill.line-info__list-item
+                          span.info-badge__suptitle Паспорт:
+                          span.info-badge__title 42-33 837281
+                  .line-info.layout__result-content-list-line
+                    .line-info__title Ваших файлов:
+                    .line-info__body
+                      .line-info__list
+                        .info-badge.info-badge--theme-outline.line-info__list-item
+                          span.info-badge__title 5 938
+                          span.info-badge__subtitle Картинок
+                        .info-badge.info-badge--theme-outline.line-info__list-item
+                          span.info-badge__title 349
+                          span.info-badge__subtitle Видео
+                        .info-badge.info-badge--theme-outline.line-info__list-item
+                          span.info-badge__title 1 293
+                          span.info-badge__subtitle Другое
+                      a(href="#").btn.btn--size-xs.btn--theme-accent-border.line-info__btn-download
+                        span.btn__inner
+                          img(src="images/icon/download.svg").btn__icon.btn__icon--rtl
+                          span.btn__title Скачать (15гб)
+                .layout__result-content-media
+                  .layout__result-content-media-row
+                    .layout__result-content-media-row-col
+                      .media-card.media-card--blur
+                        img(src="images/media-card-1.jpg")
+                    .layout__result-content-media-row-col
+                      .media-card.media-card--blur
+                        img(src="images/media-card-2.jpg")
+                    .layout__result-content-media-row-col
+                      .media-card.media-card--blur
+                        img(src="images/media-card-3.jpg")
+                    .layout__result-content-media-row-col
+                      .media-card.media-card--blur
+                        img(src="images/media-card-4.jpg")
+                    .layout__result-content-media-row-col
+                      .media-card.media-card--blur
+                        img(src="images/media-card-5.jpg")
+                    .layout__result-content-media-row-col
+                      .media-card.media-card--blur
+                        img(src="images/media-card-6.jpg")
+                    .layout__result-content-media-row-col
+                      .media-card.media-card--blur
+                        img(src="images/media-card-7.jpg")
+                    .layout__result-content-media-row-col
+                      .media-card.media-card--blur
+                        img(src="images/media-card-8.jpg")
+                    .layout__result-content-media-row-col
+                      .media-card.media-card--blur
+                        img(src="images/media-card-9.jpg")
+                    .layout__result-content-media-row-col
+                      .media-card.media-card--blur
+                        img(src="images/media-card-10.jpg")
+                    .layout__result-content-media-row-col
+                      .media-card.media-card--blur
+                        img(src="images/media-card-11.jpg")
+                    .layout__result-content-media-row-col
+                      .media-card.media-card--blur
+                        img(src="images/media-card-12.jpg")
+                    .layout__result-content-media-row-col
+                      .media-card.media-card--blur
+                        img(src="images/media-card-13.jpg")
+                    .layout__result-content-media-row-col
+                      .media-card.media-card--blur
+                        img(src="images/media-card-14.jpg")
+                    .layout__result-content-media-row-col
+                      .media-card.media-card--blur
+                        img(src="images/media-card-15.jpg")
+                    .layout__result-content-media-row-col
+                      .media-card.media-card--blur
+                        img(src="images/media-card-16.jpg")
+                .layout__result-content-access-password Пароль к архиву будет доступен при установке последнего обновления в антивирусе
+              footer.layout__result-footer
+                h2.layout__result-footer-title Что делать в таких случаях?
+                .content.layout__result-footer-text
+                  p Ваш антивирус должен иметь самые свежие обновления, оберегающие ваши устройства от взлома личных данных и получения доступа к вашим счетам.
+                button(type="submit").btn.btn--size-md.btn--theme-access.layout__result-footer-btn
+                  span.btn__inner
+                    img(src="images/icon/guard-type-3.svg").btn__icon.btn__icon--rtl
+                    span.btn__title Установить антивирус с последним обновлением
+            .layout__protect
+              h2.layout__protect-title Вы защитите:
+              .layout__protect-body
+                ul.access-list.layout__protect-body-list
+                  li Ваши личные данные
+                  li Ваши контакты
+                  li Ваши медиа файлы и другое
+                aside.protect-aside.layout__protect-body-aside
+                  .protect-aside__body
+                    .protect-aside__inner.protect-aside__inner--theme-green
+                      img(src="images/icon/guard-type-3.svg" alt="7 days FREE").protect-aside__icon
+                      .protect-aside__title 7 days<br><strong>FREE</strong>
+                      .protect-aside__subtitle after $24/m
+              .layout__protect-payments
+                .layout__protect-payments-content
+                  h3.layout__protect-payments-title Выберите способ оплаты
+                  .layout__protect-payments-list
+                    label.u-radio.u-radio--size-md.u-radio--theme-gray.layout__protect-payments-list-card
+                      input(type="radio" name="payments[]" checked value="qiwi").u-radio__control
+                      span.u-radio__icon
+                      img(src="images/icon/type-payments-1.svg" alt="qiwi").u-radio__img.u-radio__img--ltr
+                    label.u-radio.u-radio--size-md.u-radio--theme-gray.layout__protect-payments-list-card
+                      input(type="radio" name="payments[]" value="bitcoin").u-radio__control
+                      span.u-radio__icon
+                      img(src="images/icon/type-payments-2.svg" alt="bitcoin").u-radio__img.u-radio__img--ltr
+                    label.u-radio.u-radio--size-md.u-radio--theme-gray.layout__protect-payments-list-card
+                      input(type="radio" name="payments[]" value="visa").u-radio__control
+                      span.u-radio__icon
+                      img(src="images/icon/type-payments-3.svg" alt="visa").u-radio__img.u-radio__img--ltr
+                button(type="submit").btn.btn--size-md.btn--theme-accent.layout__protect-payments-btn
+                  span.btn__inner
+                    span.btn__title Перейти к оплате&nbsp;&nbsp;
+                      span $24
 
     include includes/foot.pug

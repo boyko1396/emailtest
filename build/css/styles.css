@@ -219,6 +219,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 a {
@@ -987,32 +988,69 @@ svg,
 }
 .u-progress__line-current {
   background: #FFB11B;
+  width: 0;
   height: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  transition: all 0.4s;
+  transition: linear 8s 0.6s;
   z-index: -1;
 }
+.u-progress__line-current.is-active {
+  width: 100%;
+}
 
+.aside {
+  transition: all 1.2s;
+  transition-property: color;
+}
+.aside--theme-gray {
+  color: #000;
+}
+.aside--theme-red {
+  color: #fff;
+}
+.aside--theme-blue {
+  color: #fff;
+}
+.aside--theme-green {
+  color: #fff;
+}
 .aside__inner {
   padding: 40px;
   border-radius: 24px;
-}
-.aside__inner--theme-gray {
-  background: rgba(246, 246, 246, 0.88);
-  color: #000;
-}
-.aside__inner--theme-red {
-  background: linear-gradient(287.56deg, rgba(201, 60, 162, 0.88) 0%, rgba(201, 94, 60, 0.88) 100%);
-  color: #fff;
-}
-.aside__inner--theme-green {
-  background: linear-gradient(287.56deg, rgba(54, 156, 51, 0.88) 0%, rgba(83, 186, 118, 0.88) 100%);
-  color: #fff;
+  position: relative;
 }
 .aside__inner > :last-child {
   margin-bottom: 0;
+}
+.aside__bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: inherit;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 1.2s;
+  z-index: -1;
+}
+.aside--theme-gray .aside__bg--gray, .aside--theme-blue .aside__bg--blue, .aside--theme-red .aside__bg--red, .aside--theme-green .aside__bg--green {
+  opacity: 1;
+  visibility: visible;
+}
+.aside--theme-gray .aside__bg--gray {
+  background: rgba(246, 246, 246, 0.88);
+}
+.aside--theme-blue .aside__bg--blue {
+  background: linear-gradient(287.56deg, #4F3CC9 0%, #3C8EC9 100%);
+}
+.aside--theme-red .aside__bg--red {
+  background: linear-gradient(287.56deg, rgba(201, 60, 162, 0.88) 0%, rgba(201, 94, 60, 0.88) 100%);
+}
+.aside--theme-green .aside__bg--green {
+  background: linear-gradient(287.56deg, rgba(54, 156, 51, 0.88) 0%, rgba(83, 186, 118, 0.88) 100%);
 }
 .aside__icon {
   width: 44px;
@@ -1292,12 +1330,24 @@ svg,
   flex: 0 0 380px;
   transition: all 0.7s;
   transition-delay: 0.5s;
+  z-index: 1;
 }
 .main__layout {
   background: rgba(246, 246, 246, 0.88);
   -ms-flex-positive: 1;
   flex-grow: 1;
   border-radius: 24px;
+  transition: all 0.8s;
+}
+.main__layout:not(.is-show) {
+  -webkit-transform: translateX(-50vw);
+  transform: translateX(-50vw);
+  opacity: 0;
+  visibility: hidden;
+}
+
+body.is-animation .main__aside {
+  transition-delay: 0s;
 }
 
 .bg-el {
