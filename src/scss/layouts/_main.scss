@@ -61,6 +61,7 @@
         height: auto;
         margin: 0 0 32px;
         display: block;
+        user-select: none;
     }
     &__slide {
         display: none;
@@ -73,6 +74,7 @@
             width: 44px;
             height: auto;
             margin: 0 32px 0 0;
+            user-select: none;
         }
         &-dots {
             display: flex;
@@ -153,7 +155,15 @@
 }
 
 .layout {
-    overflow: hidden;
+    background: rgba($color-gray-1, .88);
+    backdrop-filter: blur(6px);
+    border-radius: 24px;
+    &__slide {
+        display: none;
+        &-payment-method {
+            display: none;
+        }
+    }
     &__result {
         &-content {
             padding: 40px;
@@ -304,16 +314,141 @@
         transition: all .7s;
         transition-delay: .5s;
         z-index: 1;
+        &.is-hide {
+            transform: translateX(-80vw);
+        }
+    }
+    &__aside.is-hide,
+    &__layout.is-hide {
+        transition-duration: 1.4s;
+        transition-delay: 0s;
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
     }
     &__layout {
-        background: rgba($color-gray-1, .88);
         flex-grow: 1;
-        border-radius: 24px;
-        transition: all .8s;
+        transition: all 1.1s ease;
+        transition-delay: .64s;
         &:not(.is-show) {
-            transform: translateX(-50vw);
+            transform: translateX(-60vw);
             opacity: 0;
             visibility: hidden;
+            position: absolute;
+        }
+        &.is-hide {
+            transform: translateX(80vw);
+        }
+    }
+    &__success {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        &:not(.is-show) {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+        &-img-wrap {
+        }
+        &-img {
+            background: 50% no-repeat;
+            background-size: contain;
+            position: absolute;
+            transition: all 1.4s ease;
+            pointer-events: none;
+            z-index: -1;
+            &--1,
+            &--2 {
+                left: 50%;
+            }
+            &--1,
+            &--3 {
+                top: 50%;
+            }
+            &--3,
+            &--4 {
+                right: 50%;
+            }
+            &--2,
+            &--4 {
+                bottom: 50%;
+            }
+            &--1 {
+                background-image: url(../images/bg-el-5.svg);
+                width: 196px;
+                height: 196px;
+                margin-top: -290px;
+                margin-left: -620px;
+                transition-delay: 1.5s;
+            }
+            &--2 {
+                background-image: url(../images/bg-el-6.svg);
+                width: 298px;
+                height: 298px;
+                margin-bottom: -300px;
+                margin-left: -560px;
+                transition-delay: 3s;
+            }
+            &--3 {
+                background-image: url(../images/bg-el-7.svg);
+                width: 240px;
+                height: 240px;
+                margin-top: -250px;
+                margin-right: -580px;
+                transition-delay: 4s;
+            }
+            &--4 {
+                background-image: url(../images/bg-el-8.svg);
+                width: 240px;
+                height: 240px;
+                margin-bottom: -260px;
+                margin-right: -740px;
+                transition-delay: 2.5s;
+            }
+        }
+        &:not(.is-show) &-img {
+            transform: scale(0);
+            opacity: 0;
+            visibility: hidden;
+        }
+        &-content {
+            background: $gradient-green-1;
+            backdrop-filter: blur(6px);
+            width: 100%;
+            max-width: 380px;
+            min-height: 260px;
+            padding: 40px;
+            color: $color-white-1;
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            border-radius: 24px;
+            transform: translate(-50%, -50%);
+            transition: all 1.4s;
+            transition-delay: 1.6s;
+        }
+        &:not(.is-show) &-content {
+            transform: translate(-50%, -50%) scale(0);
+            opacity: 0;
+            visibility: hidden;
+        }
+        &-icon {
+            width: auto;
+            height: 52px;
+            margin: 12px auto 32px;
+            display: block;
+            user-select: none;
+        }
+        &-text {
+            margin: 0;
+            font-weight: bold;
+            font-size: var(--fs-4);
+            line-height: 1.5;
         }
     }
 }
@@ -362,21 +497,21 @@ body.is-animation .main__aside {
             }
         }
         &--2 {
-            margin-right: 650px;
+            margin-right: 670px;
             top: -280px;
             &:before {
                 transition-delay: 2s;
             }
         }
         &--3 {
-            margin-right: 520px;
+            margin-right: 440px;
             top: -130px;
             &:before {
                 transition-delay: 3s;
             }
         }
         &--4 {
-            margin-right: 250px;
+            margin-right: 230px;
             top: -172px;
             &:before {
                 transition-delay: 4s;
@@ -501,7 +636,8 @@ body.is-animation .main__aside {
     }
 }
 
-body:not(.is-animation) {
+body:not(.is-animation),
+body.is-completed {
     .main__aside {
         transform: translateX(-800px);
     }
@@ -538,6 +674,49 @@ body:not(.is-animation) {
             }
             &--4 {
                 transform: translateY(100vh);
+            }
+        }
+    }
+}
+
+body.is-completed {
+    .bg-el__item {
+        &:before {
+            transition-duration: .66s;
+        }
+        &--1 {
+            &:before {
+                transition-delay: .5s;
+            }
+        }
+        &--2 {
+            &:before {
+                transition-delay: 1.1s;
+            }
+        }
+        &--3 {
+            &:before {
+                transition-delay: 1.4s;
+            }
+        }
+        &--4 {
+            &:before {
+                transition-delay: .9s;
+            }
+        }
+        &-img {
+            transition-duration: .66s;
+            &--1 {
+                transition-delay: .5s;
+            }
+            &--2 {
+                transition-delay: 1.1s;
+            }
+            &--3 {
+                transition-delay: 1.4s;
+            }
+            &--4 {
+                transition-delay: .9s;
             }
         }
     }

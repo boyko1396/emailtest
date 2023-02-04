@@ -382,6 +382,7 @@ svg,
         height: 32px;
         margin: 0 auto 12px;
         display: block;
+        user-select: none;
     }
     &__title {
         margin: 0 0 8px;
@@ -613,11 +614,17 @@ svg,
             position: absolute;
             top: 0;
             left: 0;
-            transition: linear 8s .6s;
+            transition: ease 1s .6s;
             z-index: -1;
             &.is-active {
                 width: 100%;
             }
         }
     }
+}
+
+.u-file-el {
+    display: none;
+    position: absolute;
+    left: -9999px;
 }

@@ -1,6 +1,7 @@
 $(document).ready(function() {
   triggerCopy();
   animatedMainInit();
+  downloadReceiptEvent();
 
   $('.aside__slide:first').show();
   $('.js-step-next').click(function() {
@@ -27,7 +28,24 @@ $(document).ready(function() {
       currentSlide.next().slideToggle(450);
       currentSlide.next().next().slideToggle(450);
       $('.main__layout').addClass('is-show');
-    }, 8700);
+    }, 1700);
+  });
+
+  // result nav
+  $(function() {
+    $('.layout__slide:first').show();
+    $('.js-result-next').click(function() {
+      $(this).parents('.layout__slide').slideToggle(450);
+      $(this).parents('.layout__slide').next().slideToggle(450);
+    });
+  });
+
+  $(function() {
+    $('#' + $('.js-payment-method:checked').val()).show();
+    $('.js-payment-method').change(function(){
+      $('.layout__slide-payment-method').hide();
+      $('#' + $(this).val()).show();
+    });
   });
 
   // copy el
@@ -50,11 +68,21 @@ $(document).ready(function() {
       }, 1500);
     });
   }
+
+  // event after download receipt
+  function downloadReceiptEvent() {
+    $('.js-download-receipt-input').change(function() {
+      $('body').addClass('is-completed');
+      $('.main__aside').addClass('is-hide');
+      $('.main__layout').addClass('is-hide');
+      $('.main__success').addClass('is-show');
+    });
+  }
 });
 
 // animation main page
 function animatedMainInit() {
-  setInterval(function() {
+  setTimeout(function() {
     $('body').addClass('is-animation');
   }, 550);
 }
