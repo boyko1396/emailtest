@@ -524,19 +524,34 @@ svg,
 .line-info {
     display: flex;
     align-items: center;
+    @media (max-width: $sm) {
+        flex-wrap: wrap;
+    }
     &__title {
         max-width: 140px;
         flex: 0 0 140px;
+        @media (max-width: $sm) {
+            max-width: 100%;
+            margin: 0 0 10px;
+            flex-basis: 100%;
+        }
     }
     &__body {
         display: flex;
         align-items: center;
         flex-grow: 1;
+        @media (max-width: $sm) {
+            flex-wrap: wrap;
+        }
     }
     &__list {
         margin: -4px 0 -4px -4px;
         display: flex;
         align-items: center;
+        flex-wrap: wrap;
+        @media (max-width: $sm) {
+            flex-basis: 100%;
+        }
         &-item {
             margin: 4px;
         }
@@ -544,6 +559,9 @@ svg,
     &__btn-download {
         margin-left: auto;
         flex-shrink: 0;
+        @media (max-width: $sm) {
+            margin: 20px 0 0;
+        }
     }
 }
 
