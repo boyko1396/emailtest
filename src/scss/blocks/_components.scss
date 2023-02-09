@@ -102,7 +102,7 @@ svg,
         background: $gradient-blue-1;
         font-weight: bold;
         color: $color-white-1;
-        border-radius: 20px;
+        border-radius: 2rem;
         &:hover {
             @media (min-width: $md-mf) {
             }
@@ -132,7 +132,7 @@ svg,
         background: $gradient-green-1;
         font-weight: bold;
         color: $color-white-1;
-        border-radius: 20px;
+        border-radius: 2rem;
         &:hover {
             @media (min-width: $md-mf) {
             }
@@ -161,7 +161,7 @@ svg,
     &--theme-accent-border {
         background: transparent;
         font-weight: bold;
-        border-radius: 12px;
+        border-radius: 1.2rem;
         &:before,
         &:after {
             content: '';
@@ -183,7 +183,7 @@ svg,
             right: 2px;
             bottom: 2px;
             left: 2px;
-            border-radius: 10px;
+            border-radius: 1rem;
             z-index: -1;
         }
         &:hover {
@@ -192,26 +192,26 @@ svg,
             &:after {
                 @media (min-width: $lg-mf) {
                     background: rgba($color-gray-1, .85);
-                    box-shadow: 0 0 10px 2px rgba($color-blue-1, .3);
+                    box-shadow: 0 0 1rem .2rem rgba($color-blue-1, .3);
                 }
             }
         }
     }
     &--size {
         &-xs {
-            min-height: 32px;
-            padding: 8px 12px;
-            font-size: 12px;
+            min-height: 3.2rem;
+            padding: .8rem 1.2rem;
+            font-size: 1.2rem;
         }
         &-sm {
-            min-height: 52px;
-            padding: 12px 40px;
-            font-size: 14px;
+            min-height: 5.2rem;
+            padding: 1.2rem 4.0rem;
+            font-size: 1.4rem;
         }
         &-md {
-            min-height: 60px;
-            padding: 12px 40px;
-            font-size: 16px;
+            min-height: 6.0rem;
+            padding: 1.2rem 4.0rem;
+            font-size: 1.6rem;
         }
     }
     &__inner {
@@ -253,7 +253,7 @@ svg,
     &--theme {
         &-gray {
             background: rgba($color-black-1, .08);
-            border-radius: 20px;
+            border-radius: 2.0rem;
             &:hover {
                 @media (min-width: $lg-mf) {
                     box-shadow: 0 0 0 2px $color-blue-1;
@@ -269,9 +269,9 @@ svg,
     }
     &--size {
         &-md {
-            min-height: 52px;
-            padding: 12px 16px;
-            font-size: 16px;
+            min-height: 5.2rem;
+            padding: 1.2rem 1.6rem;
+            font-size: 1.6rem;
         }
     }
     &::placeholder {
@@ -279,7 +279,7 @@ svg,
     }
     &:focus::placeholder {
         color: transparent;
-        transform: translateY(-40px);
+        transform: translateY(-4rem);
     }
     &:hover,
     &:focus {
@@ -326,21 +326,21 @@ svg,
     li {
         background: rgba($color-green-1, .16);
         margin: 0;
-        padding: 11px 40px 11px 50px;
-        border-radius: 20px;
+        padding: 1.1rem 4.0rem 1.1rem 5.0rem;
+        border-radius: 2.0rem;
         position: relative;
         &:before {
             background: url(../images/icon/list-access-icon.svg) 50% no-repeat;
-            width: 24px;
-            height: 24px;
+            width: 2.4rem;
+            height: 2.4rem;
             content: '';
             position: absolute;
-            top: 8px;
-            left: 16px;
+            top: .8rem;
+            left: 1.6rem;
         }
     }
     li + li {
-        margin-top: 12px;
+        margin-top: 1.2rem;
     }
 }
 
@@ -352,13 +352,13 @@ svg,
     &__inner {
         width: 100%;
         height: 100%;
-        padding: 24px 28px;
+        padding: 2.4rem 2.8rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         text-align: center;
-        border-radius: 24px 8px 24px 24px;
+        border-radius: 2.4rem .8rem 2.4rem 2.4rem;
         position: absolute;
         top: 0;
         left: 0;
@@ -379,13 +379,13 @@ svg,
     }
     &__icon {
         width: auto;
-        height: 32px;
-        margin: 0 auto 12px;
+        height: 3.2rem;
+        margin: 0 auto 1.2rem;
         display: block;
         user-select: none;
     }
     &__title {
-        margin: 0 0 8px;
+        margin: 0 0 .8rem;
         font-weight: bold;
         font-size: var(--fs-4);
         line-height: 1.05;
@@ -397,7 +397,7 @@ svg,
     }
     &__subtitle {
         font-weight: 500;
-        font-size: 12px;
+        font-size: 1.2rem;
         color: rgba($color-white-1, .6);
         text-transform: uppercase;
     }
@@ -418,13 +418,13 @@ svg,
     }
     &--size {
         &-md {
-            --radio-height: 40px;
-            --radio-padding-x: 11px;
-            --radio-padding-y: 3px;
-            --radio-icon-size: 18px;
-            --radio-icon-mr: 8px;
-            --radio-img-height: 32px;
-            --radio-radius: 8px;
+            --radio-height: 4.0rem;
+            --radio-padding-x: 1.1rem;
+            --radio-padding-y: .3rem;
+            --radio-icon-size: 1.8rem;
+            --radio-icon-mr: .8rem;
+            --radio-img-height: 3.2rem;
+            --radio-radius: .8rem;
         }
     }
     &__control {
@@ -488,11 +488,11 @@ svg,
     }
     &--size {
         &-sm {
-            --input-area-height: 52px;
-            --input-area-padding-x: 20px;
-            --input-area-padding-y: 7px;
-            --input-area-radius: 20px;
-            --input-area-font-size: 18px;
+            --input-area-height: 5.2rem;
+            --input-area-padding-x: 2.0rem;
+            --input-area-padding-y: .7rem;
+            --input-area-radius: 2.0rem;
+            --input-area-font-size: 1.8rem;
         }
     }
     &:after {
@@ -502,7 +502,7 @@ svg,
         padding: inherit;
         padding-bottom: .55em;
         content: attr(data-copy-text);
-        font-size: 16px;
+        font-size: 1.6rem;
         color: $color-white-1;
         text-align: center;
         display: flex;
@@ -528,11 +528,11 @@ svg,
         flex-wrap: wrap;
     }
     &__title {
-        max-width: 140px;
-        flex: 0 0 140px;
+        max-width: 14.0rem;
+        flex: 0 0 14.0rem;
         @media (max-width: $sm) {
             max-width: 100%;
-            margin: 0 0 10px;
+            margin: 0 0 1.0rem;
             flex-basis: 100%;
         }
     }
@@ -545,7 +545,7 @@ svg,
         }
     }
     &__list {
-        margin: -4px 0 -4px -4px;
+        margin: -.4rem 0 -.4rem -.4rem;
         display: flex;
         align-items: center;
         flex-wrap: wrap;
@@ -553,25 +553,25 @@ svg,
             flex-basis: 100%;
         }
         &-item {
-            margin: 4px;
+            margin: .4rem;
         }
     }
     &__btn-download {
         margin-left: auto;
         flex-shrink: 0;
         @media (max-width: $sm) {
-            margin: 20px 0 0;
+            margin: 2.0rem 0 0;
         }
     }
 }
 
 .info-badge {
-    padding: 10px 11px;
+    padding: 1.0rem 1.1rem;
     display: flex;
     align-items: center;
-    font-size: 12px;
+    font-size: 1.2rem;
     line-height: 1;
-    border-radius: 12px;
+    border-radius: 1.2rem;
     white-space: nowrap;
     &--theme-fill {
         background: rgba($color-black-1, .08);
@@ -588,17 +588,17 @@ svg,
     &__subtitle {
         background: rgba($color-black-1, .08);
         margin-left: .7ch;
-        padding: 2px 4px;
+        padding: .2rem .4rem;
         font-weight: 600;
         font-size: 66.6667%;
         color: rgba($color-black-1, .5);
-        border-radius: 4px;
+        border-radius: .4rem;
     }
 }
 
 .media-card {
     padding-bottom: 100%;
-    border-radius: 12px;
+    border-radius: 1.2rem;
     pointer-events: none;
     user-select: none;
     @extend .img-cover;
@@ -606,7 +606,7 @@ svg,
         position: relative;
         &:before {
             background: rgba($color-black-1, .12);
-            backdrop-filter: blur(8px);
+            backdrop-filter: blur(.8rem);
             width: 100%;
             height: 100%;
             content: '';
