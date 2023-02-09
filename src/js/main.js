@@ -5,6 +5,8 @@ $(document).ready(function() {
 
   $('.aside__slide:first').show();
   $('.js-step-next').click(function() {
+    $('body').removeClass('is-animation-el');
+    var currentSlide = $(this).parents('.aside__slide');
     var currentSlide = $(this).parents('.aside__slide');
     currentSlide.slideToggle(450);
     currentSlide.next().slideToggle(450);
@@ -83,6 +85,6 @@ $(document).ready(function() {
 // animation main page
 function animatedMainInit() {
   setTimeout(function() {
-    $('body').addClass('is-animation');
+    $('body').addClass('is-animation is-animation-el');
   }, 550);
 }
