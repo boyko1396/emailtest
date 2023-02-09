@@ -1059,7 +1059,7 @@ svg,
   color: #fff;
 }
 .aside__inner {
-  padding: 3vh;
+  padding: 40px;
   border-radius: 24px;
   position: relative;
 }
@@ -1102,7 +1102,7 @@ svg,
 .aside__icon {
   width: 44px;
   height: auto;
-  margin: 0 0 3vh;
+  margin: 0 0 32px;
   display: block;
   -webkit-user-select: none;
   -ms-user-select: none;
@@ -1117,7 +1117,7 @@ svg,
   display: none;
 }
 .aside__header {
-  margin: 0 0 3vh;
+  margin: 0 0 32px;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
@@ -1181,7 +1181,7 @@ svg,
   margin: 0 0 12px;
 }
 .aside__text {
-  margin: 0 0 3vh;
+  margin: 0 0 32px;
 }
 @media (max-width: 767px) {
   .aside__text {
@@ -1196,12 +1196,7 @@ svg,
 }
 .aside__form-btn {
   width: 100%;
-  margin: 3vh 0 12px;
-}
-@media (max-width: 767px) {
-  .aside__form-btn {
-    margin-top: 20px;
-  }
+  margin: 32px 0 12px;
 }
 .aside__footer {
   margin: 0;
@@ -1247,7 +1242,7 @@ svg,
   display: none;
 }
 .layout__result-content {
-  padding: 3vh;
+  padding: 40px;
 }
 @media (max-width: 767px) {
   .layout__result-content {
@@ -1255,7 +1250,7 @@ svg,
   }
 }
 .layout__result-content-title {
-  margin: 0 0 3vh;
+  margin: 0 0 40px;
 }
 @media (max-width: 767px) {
   .layout__result-content-title {
@@ -1263,7 +1258,7 @@ svg,
   }
 }
 .layout__result-content-list {
-  margin: 0 0 3vh;
+  margin: 0 0 40px;
 }
 @media (max-width: 767px) {
   .layout__result-content-list {
@@ -1313,7 +1308,7 @@ svg,
 }
 .layout__result-footer {
   background: rgba(54, 156, 51, 0.2);
-  padding: 3vh;
+  padding: 40px;
 }
 @media (max-width: 767px) {
   .layout__result-footer {
@@ -1324,7 +1319,7 @@ svg,
   margin: 0 0 12px;
 }
 .layout__result-footer-text {
-  margin: 0 0 3vh;
+  margin: 0 0 28px;
 }
 @media (max-width: 767px) {
   .layout__result-footer-btn {
@@ -1335,7 +1330,7 @@ svg,
   }
 }
 .layout__protect {
-  padding: 3vh;
+  padding: 40px;
 }
 @media (max-width: 767px) {
   .layout__protect {
@@ -1448,7 +1443,7 @@ svg,
   font-size: 14px;
 }
 .layout__transfer {
-  padding: 3.5vh 3vh;
+  padding: 52px 40px;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: start;

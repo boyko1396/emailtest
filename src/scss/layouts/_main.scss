@@ -16,7 +16,7 @@
         }
     }
     &__inner {
-        padding: 3vh;
+        padding: 40px;
         border-radius: 24px;
         position: relative;
         @media (max-width: $sm) {
@@ -62,7 +62,7 @@
     &__icon {
         width: 44px;
         height: auto;
-        margin: 0 0 3vh;
+        margin: 0 0 32px;
         display: block;
         user-select: none;
         @media (max-width: $sm) {
@@ -73,7 +73,7 @@
         display: none;
     }
     &__header {
-        margin: 0 0 3vh;
+        margin: 0 0 32px;
         display: flex;
         align-items: center;
         @media (max-width: $sm) {
@@ -127,7 +127,7 @@
         margin: 0 0 12px;
     }
     &__text {
-        margin: 0 0 3vh;
+        margin: 0 0 32px;
         @media (max-width: $sm) {
             margin-bottom: 20px;
         }
@@ -143,10 +143,7 @@
         }
         &-btn {
             width: 100%;
-            margin: 3vh 0 12px;
-            @media (max-width: $sm) {
-                margin-top: 20px;
-            }
+            margin: 32px 0 12px;
         }
     }
     &__footer {
@@ -184,18 +181,18 @@
     }
     &__result {
         &-content {
-            padding: 3vh;
+            padding: 40px;
             @media (max-width: $sm) {
                 padding: 24px;
             }
             &-title {
-                margin: 0 0 3vh;
+                margin: 0 0 40px;
                 @media (max-width: $sm) {
                     margin-bottom: 20px;
                 }
             }
             &-list {
-                margin: 0 0 3vh;
+                margin: 0 0 40px;
                 @media (max-width: $sm) {
                     margin-bottom: 20px;
                 }
@@ -240,7 +237,7 @@
         }
         &-footer {
             background: rgba($color-green-1, .2);
-            padding: 3vh;
+            padding: 40px;
             @media (max-width: $sm) {
                 padding: 24px;
             }
@@ -248,7 +245,7 @@
                 margin: 0 0 12px;
             }
             &-text {
-                margin: 0 0 3vh;
+                margin: 0 0 28px;
             }
             &-btn {
                 @media (max-width: $sm) {
@@ -261,7 +258,7 @@
         }
     }
     &__protect {
-        padding: 3vh;
+        padding: 40px;
         @media (max-width: $sm) {
             padding: 24px;
         }
@@ -343,7 +340,7 @@
         }
     }
     &__transfer {
-        padding: 3.5vh 3vh;
+        padding: 52px 40px;
         display: flex;
         align-items: flex-start;
         @media (max-width: $sm) {
