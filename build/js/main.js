@@ -30,6 +30,7 @@ $(document).ready(function() {
       currentSlide.next().slideToggle(450);
       currentSlide.next().next().slideToggle(450);
       $('.main__layout').addClass('is-show');
+      $('.main__logo').addClass('is-result');
     }, 1700);
   });
 
